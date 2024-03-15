@@ -1,5 +1,5 @@
 from typing import Union
-from config import OWNER_ID, SUPPORT_CHAT
+from config import OWNER_ID, SUPPORT_CHAT, SUPPORT_CHANNEL
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -25,10 +25,11 @@ def queue_markup(
         ],
          [
             InlineKeyboardButton(
-                text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
+                text="🐼 ᴄʜᴀɴɴᴇʟ 🐼", url=SUPPORT_CHANNEL,
+                # text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
             ),
             InlineKeyboardButton(
-                text="🐼 sᴜᴩᴩᴏʀᴛ 🐼", url=SUPPORT_CHAT,
+                text="🐼 ɢʀᴏᴜᴘ 🐼", url=SUPPORT_CHAT,
             ),
         ],
     ]
@@ -51,10 +52,11 @@ def queue_markup(
         ],
          [
             InlineKeyboardButton(
-                text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
+                text="🐼 ᴄʜᴀɴɴᴇʟ 🐼", url=SUPPORT_CHANNEL,
+                # text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
             ),
             InlineKeyboardButton(
-                text="🐼 sᴜᴩᴩᴏʀᴛ 🐼", url=SUPPORT_CHAT,
+                text="🐼 ɢʀᴏᴜᴘ 🐼", url=SUPPORT_CHAT,
             ),
         ],
     ]
@@ -76,13 +78,14 @@ def queue_back_markup(_, CPLAY):
                 ),
            ],
              [
-            InlineKeyboardButton(
-                text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
-            ),
-            InlineKeyboardButton(
-                text="🐼 sᴜᴩᴩᴏʀᴛ 🐼", url=SUPPORT_CHAT,
-            ),
-        ],
+                InlineKeyboardButton(
+                    text="🐼 ᴄʜᴀɴɴᴇʟ 🐼", url=SUPPORT_CHANNEL,
+                    # text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
+                ),
+                InlineKeyboardButton(
+                    text="🐼 ɢʀᴏᴜᴘ 🐼", url=SUPPORT_CHAT,
+                ),
+            ],
         ]
     )
     return upl
@@ -98,10 +101,11 @@ def aq_markup(_, chat_id):
         ],
          [
             InlineKeyboardButton(
-                text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
+                text="🐼 ᴄʜᴀɴɴᴇʟ 🐼", url=SUPPORT_CHANNEL,
+                # text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
             ),
             InlineKeyboardButton(
-                text="🐼 sᴜᴩᴩᴏʀᴛ 🐼", url=SUPPORT_CHAT,
+                text="🐼 ɢʀᴏᴜᴘ 🐼", url=SUPPORT_CHAT,
             ),
         ],
     ]

@@ -1,5 +1,5 @@
 import math
-from config import SUPPORT_CHAT, OWNER_ID
+from config import SUPPORT_CHAT, OWNER_ID, SUPPORT_CHANNEL
 from pyrogram.types import InlineKeyboardButton
 
 from VenomX.utils.formatters import time_to_seconds
@@ -19,11 +19,12 @@ def track_markup(_, videoid, user_id, channel, fplay):
         ],
         [
             InlineKeyboardButton(
-                text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
+                text="🐼 ᴄʜᴀɴɴᴇʟ 🐼", url=SUPPORT_CHANNEL,
+                # text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
             ),
             InlineKeyboardButton(
-                text="🐼 sᴜᴩᴩᴏʀᴛ 🐼", url=SUPPORT_CHAT,
-            )
+                text="🐼 ɢʀᴏᴜᴘ 🐼", url=SUPPORT_CHAT,
+            ),
         ],
         # [
         #     InlineKeyboardButton(
@@ -76,11 +77,12 @@ def stream_markup_timer(_, chat_id, played, dur):
             ],
         [
             InlineKeyboardButton(
-                text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
+                text="🐼 ᴄʜᴀɴɴᴇʟ 🐼", url=SUPPORT_CHANNEL,
+                # text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
             ),
             InlineKeyboardButton(
-                text="🐼 sᴜᴩᴩᴏʀᴛ 🐼", url=SUPPORT_CHAT,
-            )
+                text="🐼 ɢʀᴏᴜᴘ 🐼", url=SUPPORT_CHAT,
+            ),
         ],
         # [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -98,11 +100,12 @@ def stream_markup(_, chat_id):
             ],
         [
             InlineKeyboardButton(
-                text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
+                text="🐼 ᴄʜᴀɴɴᴇʟ 🐼", url=SUPPORT_CHANNEL,
+                # text="🐼 ᴏᴡɴᴇʀ 🐼", url=f"tg://openmessage?user_id={OWNER_ID}",
             ),
             InlineKeyboardButton(
-                text="🐼 sᴜᴩᴩᴏʀᴛ 🐼", url=SUPPORT_CHAT,
-            )
+                text="🐼 ɢʀᴏᴜᴘ 🐼", url=SUPPORT_CHAT,
+            ),
         ],
         # [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]

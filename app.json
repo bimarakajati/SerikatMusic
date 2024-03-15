@@ -1,7 +1,7 @@
 {
-    "name": "˹ᴠᴇɴᴏᴍ˼ ✘ ˹ᴍᴜsɪᴄ˼",
+    "name": "˹​🇸​​🇪​​🇷​​🇮​​🇰​​🇦​​🇹˼ ✘ ˹ᴍᴜsɪᴄ˼",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg",
+    "logo": "https://te.legra.ph/file/327604ebe47d78a6efcfd.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -34,7 +34,7 @@
       },
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "6306738739",
+        "value": "133312836",
         "required": true
       },
       "STRING_SESSION": {

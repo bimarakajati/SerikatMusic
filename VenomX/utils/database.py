@@ -687,11 +687,11 @@ async def cleanmode_off(chat_id: int):
         cleanmode.append(chat_id)
 
 
-async def cleanmode_on(chat_id: int):
-    try:
-        cleanmode.remove(chat_id)
-    except:
-        pass      
+# async def cleanmode_on(chat_id: int):
+#     try:
+#         cleanmode.remove(chat_id)
+#     except:
+#         pass      
         
 async def get_queries() -> int:
     chat_id = 98324

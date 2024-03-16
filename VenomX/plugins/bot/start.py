@@ -46,14 +46,10 @@ async def start_pm(client, message: Message, _):
                 )
             return
         if name[0:3] == "inf":
-            m = await message.reply_text("**» ​🇸​​🇪​​🇦​​🇷​​🇨​​🇭​​🇮​​🇳​​🇬​ ​🇫​​🇴​​🇷​ ​🇹​​🇭​​🇪​ ​🇹​​🇷​​🇦​​🇨​​🇰​, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...**")
+            m = await message.reply_text("**»sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ᴛʜᴇ ᴛʀᴀᴄᴋ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...**")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
-            if len(title) > 20:
-                title = title[0:20] + '...'
-            else:
-                title = title
             for result in (await results.next())["result"]:
                 title = result["title"]
                 duration = result["duration"]
@@ -63,6 +59,10 @@ async def start_pm(client, message: Message, _):
                 channel = result["channel"]["name"]
                 link = result["link"]
                 published = result["publishedTime"]
+            if len(title) > 20:
+                title = title[0:20] + '...'
+            else:
+                title = title
             searched_text = _["start_6"].format(
                 title, duration, views, published, channellink, channel, app.mention
             )

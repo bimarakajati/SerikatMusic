@@ -393,12 +393,16 @@ class Call(PyTgCalls):
                     )
                 img = await get_thumb(videoid)
                 button = stream_markup(_, chat_id)
+                if len(title) > 20:
+                    title = title[0:20] + '...'
+                else:
+                    title = title
                 run = await app.send_photo(
                     chat_id=original_chat_id,
                     photo=img,
                     caption=_["stream_1"].format(
                         f"https://t.me/{app.username}?start=info_{videoid}",
-                        title[:23],
+                        title,
                         check[0]["dur"],
                         user,
                     ),
@@ -440,12 +444,16 @@ class Call(PyTgCalls):
                 img = await get_thumb(videoid)
                 button = stream_markup(_, chat_id)
                 await mystic.delete()
+                if len(title) > 20:
+                    title = title[0:20] + '...'
+                else:
+                    title = title
                 run = await app.send_photo(
                     chat_id=original_chat_id,
                     photo=img,
                     caption=_["stream_1"].format(
                         f"https://t.me/{app.username}?start=info_{videoid}",
-                        title[:23],
+                        title,
                         check[0]["dur"],
                         user,
                     ),
@@ -500,13 +508,17 @@ class Call(PyTgCalls):
                     )
                 if videoid == "telegram":
                     button = stream_markup(_, chat_id)
+                    if len(title) > 20:
+                        title = title[0:20] + '...'
+                    else:
+                        title = title
                     run = await app.send_photo(
                         chat_id=original_chat_id,
                         photo=config.TELEGRAM_AUDIO_URL
                         if str(streamtype) == "audio"
                         else config.TELEGRAM_VIDEO_URL,
                         caption=_["stream_1"].format(
-                            config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
+                            config.SUPPORT_CHAT, title, check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
                     )
@@ -514,11 +526,15 @@ class Call(PyTgCalls):
                     db[chat_id][0]["markup"] = "tg"
                 elif videoid == "soundcloud":
                     button = stream_markup(_, chat_id)
+                    if len(title) > 20:
+                        title = title[0:20] + '...'
+                    else:
+                        title = title
                     run = await app.send_photo(
                         chat_id=original_chat_id,
                         photo=config.SOUNCLOUD_IMG_URL,
                         caption=_["stream_1"].format(
-                            config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
+                            config.SUPPORT_CHAT, title, check[0]["dur"], user
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
                     )
@@ -527,12 +543,16 @@ class Call(PyTgCalls):
                 else:
                     img = await get_thumb(videoid)
                     button = stream_markup(_, chat_id)
+                    if len(title) > 20:
+                        title = title[0:20] + '...'
+                    else:
+                        title = title
                     run = await app.send_photo(
                         chat_id=original_chat_id,
                         photo=img,
                         caption=_["stream_1"].format(
                             f"https://t.me/{app.username}?start=info_{videoid}",
-                            title[:23],
+                            title,
                             check[0]["dur"],
                             user,
                         ),

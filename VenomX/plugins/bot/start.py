@@ -50,6 +50,10 @@ async def start_pm(client, message: Message, _):
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
+            if len(title) > 20:
+                title = title[0:20] + '...'
+            else:
+                title = title
             for result in (await results.next())["result"]:
                 title = result["title"]
                 duration = result["duration"]

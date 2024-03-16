@@ -51,10 +51,10 @@ def PlayWrapper(command):
                     disable_web_page_preview=True,
                 )
 
-        try:
-            await message.delete()
-        except:
-            pass
+        # try:
+        #     await message.delete()
+        # except:
+        #     pass
 
         audio_telegram = (
             (message.reply_to_message.audio or message.reply_to_message.voice)

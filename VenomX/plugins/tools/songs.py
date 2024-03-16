@@ -49,7 +49,7 @@ async def song_commad_group(client, message: Message, _):
 )
 @language
 async def song_commad_private(client, message: Message, _):
-    await message.delete()
+    # await message.delete()
     url = await YouTube.url(message)
     if url:
         if not await YouTube.exists(url):

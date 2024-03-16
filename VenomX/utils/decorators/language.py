@@ -12,8 +12,7 @@ def language(mystic):
                     disable_web_page_preview=True,
                 )
         try:
-            # await message.delete()
-            pass
+            await message.delete()
         except:
             pass
 

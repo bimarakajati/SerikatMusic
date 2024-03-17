@@ -59,10 +59,10 @@ async def start_pm(client, message: Message, _):
                 channel = result["channel"]["name"]
                 link = result["link"]
                 published = result["publishedTime"]
-            if len(title) > 20:
-                title = title[0:20] + '...'
-            else:
-                title = title
+            # if len(title) > 20:
+            #     title = title[0:20] + '...'
+            # else:
+            #     title = title
             searched_text = _["start_6"].format(
                 title, duration, views, published, channellink, channel, app.mention
             )

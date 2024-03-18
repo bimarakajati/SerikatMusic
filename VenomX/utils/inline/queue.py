@@ -9,6 +9,7 @@ def queue_markup(
     DURATION,
     CPLAY,
     videoid,
+    chat_id,
     played: Union[bool, int] = None,
     dur: Union[bool, int] = None,
 ):
@@ -34,6 +35,13 @@ def queue_markup(
         ],
     ]
     dur = [
+        [
+            InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
+            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}")
+        ],
         [
             InlineKeyboardButton(
                 text=_["QU_B_2"].format(played, dur),

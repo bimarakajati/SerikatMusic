@@ -85,13 +85,14 @@ async def get_queue(client, message: Message, _):
     send = _["queue_6"] if DUR == "Unknown" else _["queue_7"]
     cap = _["queue_8"].format(app.mention, title, typo, user, send)
     upl = (
-        queue_markup(_, DUR, "c" if cplay else "g", videoid)
+        queue_markup(_, DUR, "c" if cplay else "g", videoid, chat_id)
         if DUR == "Unknown"
         else queue_markup(
             _,
             DUR,
             "c" if cplay else "g",
             videoid,
+            chat_id,
             seconds_to_min(got[0]["played"]),
             got[0]["dur"],
         )
@@ -111,6 +112,7 @@ async def get_queue(client, message: Message, _):
                                     DUR,
                                     "c" if cplay else "g",
                                     videoid,
+                                    chat_id,
                                     seconds_to_min(db[chat_id][0]["played"]),
                                     db[chat_id][0]["dur"],
                                 )
@@ -225,13 +227,14 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
     send = _["queue_6"] if DUR == "Unknown" else _["queue_7"]
     cap = _["queue_8"].format(app.mention, title, typo, user, send)
     upl = (
-        queue_markup(_, DUR, cplay, videoid)
+        queue_markup(_, DUR, cplay, videoid, chat_id)
         if DUR == "Unknown"
         else queue_markup(
             _,
             DUR,
             cplay,
             videoid,
+            chat_id,
             seconds_to_min(got[0]["played"]),
             got[0]["dur"],
         )
@@ -253,6 +256,7 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
                                     DUR,
                                     cplay,
                                     videoid,
+                                    chat_id,
                                     seconds_to_min(db[chat_id][0]["played"]),
                                     db[chat_id][0]["dur"],
                                 )

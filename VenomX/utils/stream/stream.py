@@ -145,7 +145,8 @@ async def stream(
             file_path, direct = await YouTube.download(
                 vidid, mystic, videoid=True, video=status
             )
-        except:
+        except Exception as e:
+            print(e)
             raise AssistantErr(_["play_14"])
         if await is_active_chat(chat_id):
             await put_queue(

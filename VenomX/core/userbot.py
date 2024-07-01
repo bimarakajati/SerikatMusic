@@ -54,7 +54,8 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("serikatwibumaifamch")
+                await self.one.join_chat("TentaraKrajaanLangit")
+                await self.one.join_chat("wibumaifam")
                 await self.one.join_chat("serikatwibumaifam")
             except:
                 pass
@@ -83,7 +84,8 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("serikatwibumaifamch")
+                await self.two.join_chat("TentaraKrajaanLangit")
+                await self.two.join_chat("wibumaifam")
                 await self.two.join_chat("serikatwibumaifam")
             except:
                 pass
@@ -112,7 +114,8 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("serikatwibumaifamch")
+                await self.three.join_chat("TentaraKrajaanLangit")
+                await self.three.join_chat("wibumaifam")
                 await self.three.join_chat("serikatwibumaifam")
             except:
                 pass
@@ -141,7 +144,8 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("serikatwibumaifamch")
+                await self.four.join_chat("TentaraKrajaanLangit")
+                await self.four.join_chat("wibumaifam")
                 await self.four.join_chat("serikatwibumaifam")
             except:
                 pass
@@ -170,7 +174,8 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("serikatwibumaifamch")
+                await self.five.join_chat("TentaraKrajaanLangit")
+                await self.five.join_chat("wibumaifam")
                 await self.five.join_chat("serikatwibumaifam")
             except:
                 pass

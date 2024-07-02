@@ -94,7 +94,7 @@ async def get_thumb(videoid):
         # background = image2.filter(filter=ImageFilter.GaussianBlur(2.5))
         background = image2.filter(filter=ImageFilter.BoxBlur(0.5))
         enhancer = ImageEnhance.Brightness(background)
-        background = enhancer.enhance(0.5)
+        background = enhancer.enhance(0.8)
 
         # Create the rainbow gradient image
         width, height = background.size

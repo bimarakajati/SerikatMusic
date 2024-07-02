@@ -101,13 +101,13 @@ def queue_back_markup(_, CPLAY):
 
 def aq_markup(_, chat_id):
     buttons = [
-        [
-            InlineKeyboardButton(text="▶️", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="⏸️", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="🔁", callback_data=f"ADMIN Replay|{chat_id}"),
-            InlineKeyboardButton(text="⏩", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="⏹️", callback_data=f"ADMIN Stop|{chat_id}")
-        ],
+        # [
+        #     InlineKeyboardButton(text="▶️", callback_data=f"ADMIN Resume|{chat_id}"),
+        #     InlineKeyboardButton(text="⏸️", callback_data=f"ADMIN Pause|{chat_id}"),
+        #     InlineKeyboardButton(text="🔁", callback_data=f"ADMIN Replay|{chat_id}"),
+        #     InlineKeyboardButton(text="⏩", callback_data=f"ADMIN Skip|{chat_id}"),
+        #     InlineKeyboardButton(text="⏹️", callback_data=f"ADMIN Stop|{chat_id}")
+        # ],
          [
             InlineKeyboardButton(
                 text="🐼 ᴄʜᴀɴɴᴇʟ 🐼", url=SUPPORT_CHANNEL,
